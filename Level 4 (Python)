@@ -1,0 +1,38 @@
+#10952
+while 1:
+  A, B=input().split()
+  if int(A)==0 and int(B)==0:
+    break
+  print(int(A)+int(B))
+
+
+#10951
+while 1:
+  try:
+    A, B=input().split()
+    print(int(A)+int(B))
+  except:
+    break
+
+
+#1110
+N=int(input())
+A=0
+NEW=0
+i=0
+
+while i<1:
+  if N<10:
+    NEW=10*N+N
+  else:
+    NEW=(N%10)*10+((N//10)+(N%10))%10
+  i+=1
+  
+while N!=NEW:
+  A=NEW
+  if A<10:
+    NEW=10*A+A
+  else:
+    NEW=(A%10)*10+((A//10)+(A%10))%10
+  i+=1
+print(i)
