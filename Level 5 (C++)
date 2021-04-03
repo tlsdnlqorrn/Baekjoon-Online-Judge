@@ -1,0 +1,152 @@
+//10818
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void) {
+	int num;
+	int min = 0, max = 0;
+	scanf("%d", &num);
+	int *arr = (int*)malloc(sizeof(int)*num);
+
+	for (int i = 0;i < num;i++) {
+		scanf("%d", &arr[i]);
+	}
+
+	min = arr[0];
+	max = arr[0];
+	for (int i = 0;i < num;i++) {
+		if (arr[i] <= min)
+			min = arr[i];
+		if (arr[i] >= max)
+			max = arr[i];
+	}
+	printf("%d %d", min, max);
+	free(arr);
+
+	return 0;
+}
+
+
+//2562
+#include<stdio.h>
+
+int main(void) {
+	int n = 0;
+	int max = 0;
+	int arr[9];
+
+	for (int i = 0;i < 9;i++) {
+		scanf("%d", &arr[i]);
+	}
+
+	max = arr[0];
+	for (int i = 0;i < 9;i++) {
+		if (arr[i] >= max)
+			max = arr[i];
+	}
+	for (int i = 0;i < 9;i++) {
+		if (max == arr[i])
+			n = i + 1;
+	}
+	printf("%d\n%d", max, n);
+
+	return 0;
+}
+
+
+//2577
+#include<stdio.h>
+
+int main(void) {
+	int A, B, C;
+	int n, re;
+	int arr[8];
+	scanf("%d", &A);
+	scanf("%d", &B);
+	scanf("%d", &C);
+	n = A*B*C;
+
+	int i = 0;
+	while (n != 0) {
+		re = n % 10;
+		arr[i] = re;
+		n /= 10;
+		i++;
+	}
+	for (int j = 0;j < 10;j++) {
+		int count = 0;
+		for (int k = 0;k < i;k++) {
+			if (arr[k] == j)
+				count++;
+		}
+		printf("%d\n", count);
+	}
+
+	return 0;
+}
+
+
+//3052
+#include<stdio.h>
+
+int main(void) {
+	int n;
+	int reN[10];
+	int sum, result = 0;
+
+	for (int i = 0;i < 10;i++) {
+		scanf("%d", &n);
+		reN[i] = n % 42;
+	}
+	for (int i = 0;i < 10;i++) {
+		sum = 0;
+		for (int j = i + 1;j < 10;j++) {
+			if (reN[i] == reN[j]) {
+				sum++;
+			}
+		}
+		if (sum == 0) {
+			result++;
+		}
+	}
+	printf("%d", result);
+
+	return 0;
+}
+
+
+//1546
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void) {
+	int N;
+	scanf("%d", &N);
+	int high;
+	double sum = 0, ave;
+
+	int *test = (int*)malloc(sizeof(int)*N);
+	for (int i = 0;i < N;i++)
+		scanf("%d", &test[i]);
+
+	high = test[0];
+	for (int i = 1;i < N;i++) {
+		if (test[i] > high)
+			high = test[i];
+	}
+
+	double *fab = (double*)malloc(sizeof(double)*N);
+	for (int i = 0;i < N;i++) {
+		fab[i] = (double)test[i] / high * 100;
+		sum += fab[i];
+	}
+	ave = sum / N;
+	printf("%f", ave);
+	free(test);
+	free(fab);
+
+	return 0;
+}
+
+
+//8958
