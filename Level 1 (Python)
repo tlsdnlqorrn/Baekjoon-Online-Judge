@@ -1,0 +1,55 @@
+//2557
+print("Hello World!")
+
+
+//10718
+print("강한친구 대한육군 \n강한친구 대한육군")
+
+
+//10171
+print("\ /\ \n ) ( ')\n( / )\n \(__)|")
+
+
+//10172
+print("|\\_/| \n|q p| /} \n( 0 )\"\"\"\ \n|\"^\"` | \n||_/=\\\\__|")
+
+
+//1000
+A, B=input().split()
+print(int(A)+int(B))
+
+
+//1001
+A, B=input().split()
+print(int(A)-int(B))
+
+
+//10998
+A, B=input().split()
+print(int(A)*int(B))
+
+
+//1008
+A, B=input().split()
+print(int(A)/int(B))
+
+
+//10869
+A, B=input().split()
+print(int(A)+int(B))
+print(int(A)-int(B))
+print(int(A)*int(B))
+print(int(A)//int(B))
+print(int(A)%int(B))
+
+
+//2588
+A=input()
+B=input()
+x=int(A)*(int(B)%10)
+y=int(A)*(int(int(B)%100/10))
+z=int(A)*(int(B)//100)
+print(x)
+print(y)
+print(z)
+print(x+y*10+z*100)
