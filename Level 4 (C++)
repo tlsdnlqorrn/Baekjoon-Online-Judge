@@ -1,0 +1,63 @@
+//10952
+#include<stdio.h>
+
+int main(void) {
+	int A, B;
+
+	while (true) {
+		scanf("%d %d", &A, &B);
+		if (A != 0 && B != 0)
+			printf("%d\n", A + B);
+		else
+			break;
+	}
+
+	return 0;
+}
+
+
+//10951
+#include<stdio.h>
+
+int main(void) {
+	int A, B;
+
+	while (scanf("%d %d", &A, &B) != EOF) { // 출력초과 방지
+		if (0 < A&&B < 10)
+			printf("%d\n", A + B);
+		else
+			printf("error");
+	}
+
+	return 0;
+}
+
+
+//1110
+#include<stdio.h>
+
+int main(void) {
+	int N, A = 0;
+	int NEW = 0;
+	int i = 0;
+	scanf("%d", &N);
+
+	while (i < 1) {
+		if (N< 10)
+			NEW = 10 * N + N;
+		else
+			NEW = (N % 10) * 10 + ((N / 10) + (N % 10)) % 10;
+		i++;
+	}
+	while (N != NEW) {
+		A = NEW;
+		if (A< 10)
+			NEW = 10 * A + A;
+		else
+			NEW = (A % 10) * 10 + ((A / 10) + (A % 10)) % 10;
+		i++;
+	}
+	printf("%d", i);
+
+	return 0;
+}
