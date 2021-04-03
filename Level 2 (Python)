@@ -1,0 +1,65 @@
+//1330
+A, B=input().split()
+
+if int(A)>int(B):
+  print(">")  
+elif int(A)<int(B):
+  print("<")
+else:
+  print("==")
+
+
+//9498
+A=input()
+
+if int(A)>=90:
+  print("A")
+elif int(A)>=80:
+  print("B")
+elif int(A)>=70:
+  print("C")
+elif int(A)>=60:
+  print("D")
+else:
+  print("F")
+
+
+//2753
+A=input()
+
+if int(A)>=1 and int(A)<=4000:
+  if (int(A)%4==0 and int(A)%100!=0) or (int(A)%4==0 and int(A)%400==0):
+    print("1")
+  else:
+    print("0")
+else:
+  print("error")
+
+
+//14681
+x=input()
+y=input()
+
+if int(x)>0 and int(y)>0:
+  print("1")
+elif int(x)<0 and int(y)>0:
+  print("2")
+elif int(x)<0 and int(y)<0:
+  print("3")
+else:
+  print("4")
+
+
+//2884
+H, M=input().split()
+
+if int(H)==0:
+  if int(M)>=45:
+    print(H, int(M)-45)
+  else:
+    print("23", 60-(45-int(M)))
+else:
+if int(M)>=45:
+  print(H, int(M)-45)
+else:
+  print(int(H)-1, 60-(45-int(M)))
