@@ -107,39 +107,20 @@ return 0;
 
 
 //10430
-
-​
-
 #include <stdio.h>
 
-​
-
 int main() {
-
 int A, B, C;
-
 scanf("%d", &A);
-
 scanf("%d", &B);
-
 scanf("%d", &C);
 
-​
-
-​
-
 if (A >=2 && B,C <= 10000) {
-
 printf("%d\n%d\n%d\n%d", (A + B) % C, ((A%C) + (B%C)) % C, (A * B) % C, ((A%C) * (B%C)) % C);
-
 }
-
 else printf("error");
 
-​
-
 return 0;
-
 }
 
 
