@@ -1,0 +1,189 @@
+//2793
+#include<stdio.h>
+
+int main(void) {
+	int N;
+	scanf("%d", &N);
+
+	for (int i = 1;i < 10;i++) {
+		printf("%d * %d = %d\n", N, i, N*i);
+	}
+
+	return 0;
+}
+
+
+//10950
+#include<stdio.h>
+
+int main(void) {
+	int T = 0;
+	int A, B;
+	scanf("%d", &T);
+
+	for (int i = 0;i<T;i++) {
+		scanf("%d %d", &A, &B);
+		printf("%d\n", A + B);
+	}
+
+	return 0;
+}
+
+
+//8393
+#include<stdio.h>
+
+int main(void) {
+	int n;
+	int sum = 0;
+	scanf("%d", &n);
+
+	if (1 <= n&&n <= 10000) {
+		for (int i = 1;i < n + 1;i++) {
+			sum += i;
+		}
+		printf("%d", sum);
+	}
+	else
+		printf("error");
+
+	return 0;
+}
+
+
+//15552
+
+
+
+//2741
+#include<stdio.h>
+
+int main(void) {
+	int N;
+	scanf("%d", &N);
+
+	if (N <= 100000) {
+		for (int i = 1;i < N + 1;i++)
+			printf("%d\n", i);
+	}
+	else
+		printf("error");
+
+	return 0;
+}
+
+
+//2742
+#include<stdio.h>
+
+int main(void) {
+	int N;
+	scanf("%d", &N);
+
+	if (N <= 100000) {
+		for (int i = N;i >0;i--)
+			printf("%d\n", i);
+	}
+	else
+		printf("error");
+
+	return 0;
+}
+
+
+//11021
+#include<stdio.h>
+
+int main(void) {
+	int T = 0;
+	int A, B;
+	scanf("%d", &T);
+
+	for (int i = 1;i<T + 1;i++) {
+		scanf("%d %d", &A, &B);
+		printf("Case #%d: %d\n", i, A + B);
+	}
+
+	return 0;
+}
+
+
+//11022
+#include<stdio.h>
+
+int main(void) {
+	int T = 0;
+	int A, B;
+	scanf("%d", &T);
+
+	for (int i = 1;i<T + 1;i++) {
+		scanf("%d %d", &A, &B);
+		printf("Case #%d: %d + %d = %d\n", i, A, B, A + B);
+	}
+
+	return 0;
+}
+
+
+//2438
+#include<stdio.h>
+
+int main(void) {
+	int N;
+	scanf("%d", &N);
+
+	if (1 <= N &&N <= 100) {
+		for (int i = 1;i < N + 1;i++) {
+			for (int j = 0;j < i;j++) {
+				printf("*");
+			}
+			printf("\n");
+		}
+	}
+	else
+		printf("error");
+
+	return 0;
+}
+
+
+//2439
+#include<stdio.h>
+
+int main(void) {
+	int N;
+	scanf("%d", &N);
+
+	if (1 <= N &&N <= 100) {
+		for (int i = 1;i < N + 1;i++) {
+			for (int j = 0;j<N - i;j++)
+				printf(" ");
+			for (int j = 0;j < i;j++)
+				printf("*");
+			printf("\n");
+		}
+	}
+	else
+		printf("error");
+
+	return 0;
+}
+
+
+//10871
+#include<stdio.h>
+
+int main(void) {
+	int N, X;
+	int num[10000];scanf("%d %d", &N, &X);
+
+	for (int i = 0;i < N;i++) {
+		scanf("%d", &num[i]);
+	}
+	for (int i = 0;i < N;i++) {
+		if (num[i] < X)
+			printf("%d ", num[i]);
+	}
+
+	return 0;
+}
