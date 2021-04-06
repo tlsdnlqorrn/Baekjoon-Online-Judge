@@ -150,3 +150,34 @@ int main(void) {
 
 
 //8958
+#include<stdio.h>
+
+int main(void) {
+	int n;
+	scanf("%d", &n);
+
+	for(int i=0;i<n;i++){
+		char test[80];
+		scanf("%s", test);
+		int count[80];
+		int j = 0, sum = 0, result = 0;
+		while (test[j] != NULL) {
+			if (test[j] == 'O') {
+				sum += 1;
+				count[j] = sum;
+			}
+			else {
+				count[j] = 0;
+				sum = 0;
+			}
+			result += count[j];
+			j++;
+		}
+		printf("%d\n", result);
+	}
+
+	return 0;
+}
+
+
+// 4344
